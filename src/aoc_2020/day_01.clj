@@ -21,7 +21,7 @@
   (for [x numbers
         y numbers
         z numbers
-        :when (and (< x y) (< y z))
+        :when (< x y z)
         :when (= 2020 (+ x y z))]
     (* x y z)))
 
