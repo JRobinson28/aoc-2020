@@ -20,9 +20,9 @@
 (defn count-trees
   "Counts number of trees hit in dataset"
   [input dx dy]
-  (count
-   (filter
-    #(= (get-in input %) \#) (coords dx dy))))
+  (->> (coords dx dy)
+       (filter #(= (get-in input %) \#))
+       count))
 
 ;; Part 1
 (count-trees data 3 1)
