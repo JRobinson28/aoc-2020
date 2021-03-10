@@ -23,6 +23,7 @@
     id))
 
 (defn get-my-seat
+  "Returns single missing seat ID"
   [seats]
   (let [r (set (range (apply min seats) (apply max seats)))
         occupied (set seats)]
